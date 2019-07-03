@@ -1,14 +1,15 @@
 package com.riz.conversions;
 
-import com.riz.util.ConversionUtil;
-
 public class HundredConversion implements Conversion {
 
 	@Override
-	public String convertToWord(String number) {
+	public String convertToWord(String numberToBeConverted) {
 		// TODO Auto-generated method stub
-		int numberToBeConvertedInhundred = Integer.parseInt(number);
-		return ConversionUtil.getNumberInWords(numberToBeConvertedInhundred);
+		int subStringToBeConverted = Integer.parseInt(numberToBeConverted);
+		
+		if(subStringToBeConverted!=0)
+			return Conversion.getNumberInWords(subStringToBeConverted);
+		return "";
 	}
 
 }
